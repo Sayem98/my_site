@@ -1,0 +1,87 @@
+#main-navigation{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: cadetblue;
+}
+
+#main-navigation a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+#main-navigation a:hover,
+#main-navigation a:active{
+    color: #cf79f1;
+}
+
+#main-navigation h1:hover,
+#main-navigation h1:active{
+    color: white;
+}
+#main-navigation button{
+    margin: 1rem auto 2rem auto;
+    background-color: blue;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+
+#all-posts{
+    background-color: darkgrey;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 60rem;
+    margin:10rem auto 2rem auto;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.4);
+}
+
+#all-posts h2{
+    text-align: center;
+    color: black;
+}
+
+#all-posts ul{
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+#all-posts li{
+    flex: 2;
+}
+
+
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+    padding: 1rem;
+}
+
+.post a:hover,
+.post a:active{
+    transform: scale(1.1);
+    background-color: #390281;
+    color: white;
+}
+.post img{
+    width: 5rem;
+}

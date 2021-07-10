@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Saved-Posts
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/all_post.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>Saved Posts</h2>
+    <ul>
+
+        {% if has_posts is True %}
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        {% else %}
+            <h2>There is no post saved yet. Save a post for reading letter. After sometime all will be cleared.</h2>
+        {% endif %}
+
+
+
+    </ul>
+    <form action="/clear" method="post">
+        {% csrf_token %}
+        <button >Clear</button>
+    </form>
+
+</section>
+
+{% endblock %}
+

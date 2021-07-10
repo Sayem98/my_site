@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    My-Blog
+{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+{% block content %}
+    </header>
+    <section id="welcome">
+        <header>
+            <img src="{% static 'images/me.png' %}" alt="Sayem- The Author of this blog"/>
+            <h2>Sayem Abedin's Blog</h2>
+            <p>Hi I am sayem. I like to pst about tech and the world!</p>
+        </header>
+
+    </section>
+    <section id="latest-posts">
+        <ul>
+            {% for post in object_list %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+    <section id="about">
+        <h1>What i do</h1>
+        <p>
+            I love programming. I love to help other.
+        </p>
+    </section>
+{% endblock %}
